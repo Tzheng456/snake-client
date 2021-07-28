@@ -12,6 +12,11 @@ const handleUserInput = function (key) {
   if (key === "\u0003") {
     process.exit();
   }
+  switch (key) {
+    case key:
+      console.log(key);
+      break;
+  }
 };
 
 stdin.on("data", handleUserInput);
