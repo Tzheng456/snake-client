@@ -1,4 +1,5 @@
-const connect = require("./play");
+const { connect, setupInput } = require("./play");
 
 console.log("Connecting ...");
 connect();
+setupInput();
