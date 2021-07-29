@@ -1,6 +1,9 @@
 const { stdin } = require("process");
+const play = require("./play");
+let connection;
 
-const setupInput = function () {
+const setupInput = function (conn) {
+  connection = conn;
   const stdin = process.stdin;
   stdin.setRawMode(true);
   stdin.setEncoding("utf8");
@@ -13,8 +16,17 @@ const handleUserInput = function (key) {
     process.exit();
   }
   switch (key) {
-    case key:
-      console.log(key);
+    case "w":
+      connection.write("Move: up");
+      break;
+    case "s":
+      connection.write("Move: down");
+      break;
+    case "a":
+      connection.write("Move: left");
+      break;
+    case "d":
+      connection.write("Move: right");
       break;
   }
 };

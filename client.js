@@ -1,5 +1,5 @@
 const connect = require("./play");
 const setupInput = require("./input");
 console.log("Connecting ...");
-connect();
-setupInput();
+let connectObj = connect();
+setupInput(connectObj);
